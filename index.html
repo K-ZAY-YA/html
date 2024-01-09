@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing</title>
+    <!-- <script src="https://kit.fontawesome.com/61580a3fab.js" crossorigin="anonymous"></script> -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+
+        .next-page {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #4caf50;
+            font-weight: bold;
+        }
+
+        i {
+            margin-left: 5px;
+        }
+
+        .alert {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #4caf50;
+            color: #fff;
+            border-radius: 4px;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+
+            input,
+            button {
+                width: calc(100% - 20px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>This is my testing webapp</h1>
+        <small class="alert" id="successAlert">This Text Added Successfully</small>
+        <form id="myForm">
+            <div class="form-group">
+                <label for="input">Enter your Text</label>
+                <input type="text" placeholder="Enter text..." id="textInput"><br>
+                <button type="button" onclick="submitForm()">Submit</button>
+            </div>
+        </form>
+        <div class="next-page">
+            <a href="note.html">Go To Note Page <i class="fa-solid fa-right-long"></i></a>
+        </div>
+    </div>
+
+    <script>
+        function submitForm() {
+            document.getElementById('successAlert').style.display = 'block';
+        }
+    </script>
+</body>
+
+</html>
